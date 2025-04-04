@@ -76,73 +76,149 @@
 //Encapsulation in javascript OOP
 // Encapsulation is the bundling of data and methods that operate on that data within one unit, such as a class. 
 // It restricts direct access to some of an object's components and can prevent the accidental modification of data.
-class Car {
-    constructor(brand, price){
-        this.brand = brand;
-        this._price = price;
-    }
+// class Car {
+//     constructor(brand, price){
+//         this.brand = brand;
+//         this._price = price;
+//     }
     
-    // get price allows reading _price in a controlled way
-    get price(){  //getter method
-        return `$${this._price}`;
-    }
+//     // get price allows reading _price in a controlled way
+//     get price(){  //getter method
+//         return `$${this._price}`;
+//     }
    
 
-    //set price allows data validation before setting _price
-    set price(newPrice){  //setter method
-        if (newPrice > 0) {
-            this._price = newPrice;
-        } 
-        else {
-            console.log("Price must be positive.");
-        }
+//     //set price allows data validation before setting _price
+//     set price(newPrice){  //setter method
+//         if (newPrice > 0) {
+//             this._price = newPrice;
+//         } 
+//         else {
+//             console.log("Price must be positive.");
+//         }
+//     }
+// }
+
+// const myCar = new Car("Range Rover Velar", 9000000);
+// console.log(myCar.price);
+
+
+// // second encapsulaton example
+
+// class Person {
+//     constructor(name, age){
+//         this._name = name;
+//         this._age = age; // underscore indicates private property
+//     }
+
+//     get name(){
+//         return this._name;
+//     }
+
+//     set name(newName){
+//         if (typeof newName === "string"){
+//             this._name = newName;
+//         } else {
+//             throw new Error("name must be a string.");
+//         }
+//     }
+
+//     get age(){
+//         return this._age;
+//     }
+
+//     set age(newage){
+//         if(typeof newage === "number" && newage > 0){
+//             this._age = newage;
+//         } else {
+//             throw new Error("age must be a positive number.");
+//         }
+//     }
+// }
+
+// const person = new Person();
+
+// person.name = "Samuel";
+// person.age = 45;
+
+// console.log(person.name);
+// console.log(person.age);
+
+
+
+//Polymorphism
+class Animal {
+    speak() {
+        console.log("Animal speaks");
     }
 }
 
-const myCar = new Car("Range Rover Velar", 9000000);
-console.log(myCar.price);
-
-
-// second encapsulaton example
-
-class Person {
-    constructor(name, age){
-        this._name = name;
-        this._age = age; // underscore indicates private property
-    }
-
-    get name(){
-        return this._name;
-    }
-
-    set name(newName){
-        if (typeof newName === "string"){
-            this._name = newName;
-        } else {
-            throw new Error("name must be a string.");
-        }
-    }
-
-    get age(){
-        return this._age;
-    }
-
-    set age(newage){
-        if(typeof newage === "number" && newage > 0){
-            this._age = newage;
-        } else {
-            throw new Error("age must be a positive number.");
-        }
+class Dog extends Animal {
+    speak() {
+        console.log("Dog barks");
     }
 }
 
-const person = new Person();
+class Cat extends Animal {
+    speak() {
+        console.log("Cat meows");
+    }
+}
 
-person.name = "Samuel";
-person.age = 45;
+const animals = [new Dog(), new Cat()];
+animals.forEach(animal => animal.speak());
 
-console.log(person.name);
-console.log(person.age);
+//polymorphism
+
+class Shape {
+    draw(){
+        console.log("Drawing a shape");
+        
+    }
+}
+
+class Circle extends Shape {
+    draw(){
+        console.log("Drawing a circle");
+    }
+}
+
+class REctangle extends Shape {
+    draw(){
+        console.log("Drawing a rectangle");
+    }
+}
+
+const shapes = [new Circle(), new REctangle()];
+shapes.forEach(shape => shape.draw());
 
 
+class Car {
+    drive(){
+        console.log("Driving a car");
+    }
+}
 
+class Boat {
+    drive(){
+        console.log("Driving a boat");
+    }
+}
+
+class Airplane {
+    drive(){
+        console.log("Driving an airplane");
+    }
+}
+
+function testDrive(vehicle){
+    vehicle.drive();
+}
+
+const car = new Car();
+const boat = new Boat();
+const airplane = new Airplane();
+
+testDrive(car);
+testDrive(boat);
+testDrive(airplane);
