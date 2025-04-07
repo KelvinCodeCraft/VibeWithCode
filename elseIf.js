@@ -16,7 +16,7 @@
 
 // if else statements
 
-// let score = 90;
+// let score = 60;
 
 // if (score >= 90) {
 //     console.log("A");
@@ -31,7 +31,7 @@
 //     console.log("Fail")
 // }
 
-// let age = 15;
+// let age = 18;
 
 // if (age >= 18) {
 //     console.log("You can vote!");
@@ -42,10 +42,10 @@
 
 //nested if statement
 
-// let num = -6;
+// let num = 6;
 
 // if (num > 0) {
-//     if (num % 2 === 0) {
+//     if (num % 2 === 0) {  
 //         console.log("Even number");
 //     }
 //     else (
@@ -56,8 +56,8 @@
 //     console.log("A negative number")
 // }
 
-// let isLoggedIn = false;
-// let isAdmin = false;
+// let isLoggedIn = true;
+// let isAdmin = true;
 
 // if (isLoggedIn) {
 //    if (isAdmin){
@@ -71,13 +71,13 @@
 //     console.log("Please log in");
 // }
 
-let isLoggedIn = true;
-let isAdmin = true;
+// let isLoggedIn = false;
+// let isAdmin = false;
 
-console.log(isLoggedIn ? (isAdmin ? "Welcome Admin" : "Welcome User") : "Please log in");
+// console.log(isLoggedIn ? (isAdmin ? "Welcome Admin" : "Welcome User") : "Please log in");
 
 //ternary operator
-// let isRaining = false;
+// let isRaining = true;
 // let message = isRaining ? "Take an umbrella": "No need for an umbrella";
 // console.log(message);
 

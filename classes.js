@@ -1,77 +1,96 @@
-// class Person {
-//     constructor(name, age){
-//         this.name = name;
-//         this.age = age;
-//     }
+class Person {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
 
-//     greet(){
-//         return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
-//     }
-// }
+    greet(){
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+    }
+}
 
-// const person1 = new Person("Samuel", 20);
-// const person3 = new Person("Kelvin", 20);
+const person1 = new Person("Samuel", 20);
+console.log(person1.greet());
+const person3 = new Person("Ibrah", 20);
+console.log(person3.greet());
 
-// console.log(person3.greet());
-// console.log(person1.greet());
 
-// class Employee extends Person {
-//     constructor(name, age, job){
-//         super(name, age);
-//         this.job = job;
-//     }
+// inheritance in javascript OOP
+class Employee extends Person {
+    constructor(name, age, job){
+        super(name, age);
+        this.job = job;
+    }
 
-//     work(){
-//         return `Hello, my name is ${this.name} and I am ${this.age} years old and I work as a ${this.job}.`;
-//     }
-// }
+    work(){
+        return `Hello, my name is ${this.name} and I am ${this.age} years old and I work as a ${this.job}.`;
+    }
+}
 
-// const empl1 = new Employee("Isaac", 20, "Software Engineer");
-// console.log(empl1.work());
-// console.log(empl1.greet());
+const empl1 = new Employee("Ibrah", 20, "Software Engineer");
+console.log(empl1.work());
+
+console.log(empl1.greet());
 
 // //inheritance in javascript OOP
 // //parent class
-// class Animal {
-//     constructor(name) {
-//         this.name = name;
-//     }
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
 
-//     speak(){
-//         return `${this.name} makes a noise.`;
-//     }
-// }
+    speak(){
+        return `${this.name} makes a noise.`;
+    }
+}
 
-// //child class
+//child class
 
-// class Dog extends Animal {
-//     constructor (name, breed){
-//         super(name);
-//         this.breed = breed;
-//     }
+class Dog extends Animal {
+    constructor (name, breed){
+        super(name);
+        this.breed = breed;
+    }
 
-//     speak(){
-//         return `${this.name} bark.`;
-//     }
-// }
+    speak(){
+        return `${this.name} bark and ${this.breed} is the breed.`;
+    }
+}
 
-// const ourDog = new Dog("Rex", "Labrador");
-// console.log(ourDog.speak());
+const ourDog = new Dog("Rex", "Labrador");
+console.log(ourDog.speak());
 
-// class Person5 {
-//     constructor(name, age){
-//         this.name = name;
-//         this.age = age;
-//     }
+class Cat extends Animal {
+    constructor(name, sound, color){
+        super(name);
+        this.sound = sound;
+        this.color = color;
+    }
 
-//     greet(){
-//         return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
-//     }
-// }
+    speak(){
+        return `${this.name}  produces ${this.sound} it is ${this.color}.`;
+    }
+}
+
+const ourCat = new Cat("Ruiru", "meow", "black");
+console.log(ourCat.speak());
+
+
+
+class Person5 {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    greet(){
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+    }
+}
 
 // //you create the instance of the object
-// const person4 = new Person5("Samuel", 20);
-// console.log(person4.greet());
+const person4 = new Person5("Samuel", 20);
+console.log(person4.greet());
 
 //Encapsulation in javascript OOP
 // Encapsulation is the bundling of data and methods that operate on that data within one unit, such as a class. 
@@ -147,78 +166,78 @@
 
 
 //Polymorphism
-class Animal {
-    speak() {
-        console.log("Animal speaks");
-    }
-}
+// class Animal {
+//     speak() {
+//         console.log("Animal speaks");
+//     }
+// }
 
-class Dog extends Animal {
-    speak() {
-        console.log("Dog barks");
-    }
-}
+// class Dog extends Animal {
+//     speak() {
+//         console.log("Dog barks");
+//     }
+// }
 
-class Cat extends Animal {
-    speak() {
-        console.log("Cat meows");
-    }
-}
+// class Cat extends Animal {
+//     speak() {
+//         console.log("Cat meows");
+//     }
+// }
 
-const animals = [new Dog(), new Cat()];
-animals.forEach(animal => animal.speak());
+// const animals = [new Dog(), new Cat()];
+// animals.forEach(animal => animal.speak());
 
-//polymorphism
+// //polymorphism
 
-class Shape {
-    draw(){
-        console.log("Drawing a shape");
+// class Shape {
+//     draw(){
+//         console.log("Drawing a shape");
         
-    }
-}
+//     }
+// }
 
-class Circle extends Shape {
-    draw(){
-        console.log("Drawing a circle");
-    }
-}
+// class Circle extends Shape {
+//     draw(){
+//         console.log("Drawing a circle");
+//     }
+// }
 
-class REctangle extends Shape {
-    draw(){
-        console.log("Drawing a rectangle");
-    }
-}
+// class REctangle extends Shape {
+//     draw(){
+//         console.log("Drawing a rectangle");
+//     }
+// }
 
-const shapes = [new Circle(), new REctangle()];
-shapes.forEach(shape => shape.draw());
+// const shapes = [new Circle(), new REctangle()];
+// shapes.forEach(shape => shape.draw());
 
 
-class Car {
-    drive(){
-        console.log("Driving a car");
-    }
-}
+// class Car {
+//     drive(){
+//         console.log("Driving a car");
+//     }
+// }
 
-class Boat {
-    drive(){
-        console.log("Driving a boat");
-    }
-}
+// class Boat {
+//     drive(){
+//         console.log("Driving a boat");
+//     }
+// }
 
-class Airplane {
-    drive(){
-        console.log("Driving an airplane");
-    }
-}
+// class Airplane {
+//     drive(){
+//         console.log("Driving an airplane");
+//     }
+// }
 
-function testDrive(vehicle){
-    vehicle.drive();
-}
+// function testDrive(vehicle){
+//     vehicle.drive();
+// }
 
-const car = new Car();
-const boat = new Boat();
-const airplane = new Airplane();
+// const car = new Car();
+// const boat = new Boat();
+// const airplane = new Airplane();
 
-testDrive(car);
-testDrive(boat);
-testDrive(airplane);
+// testDrive(car);
+// testDrive(boat);
+// testDrive(airplane);

@@ -1,39 +1,39 @@
-// switch (expression) {
-//     case value1:
-//         //statement
-//         break;
-//     case value2:
-//         //statement
-//         break;
-//     case value3:
-//         //statement
-//         break;
-//     default:
+switch (expression) {
+    case value1:
+        //statement
+        break;
+    case value2:
+        //statement
+        break;
+    case value3:
+        //statement
+        break;
+    default:
 
-// }
+}
 
-// let day = "Sunday";
+let day = "Sunday";
 
-// switch (day) {
-//     case "Monday":
-//         console.log("Today is Monday");
-//         break;
-//     case "Tuesday":
-//         console.log("Today is Tuesday");
-//         break;
-//     case "Wednesday":
-//         console.log("Today is Wednesday");
-//         break;
-//     case "Thursday":
-//         console.log("Today is Thursday");
-//         break;
-//     case "Friday":
-//         console.log("Today is Friday");
-//         break;
-//     default:
-//         console.log("Today is a weekday");
-//         break;
-// }
+switch (day) {
+    case "Monday":
+        console.log("Today is Monday");
+        break;
+    case "Tuesday":
+        console.log("Today is Tuesday");
+        break;
+    case "Wednesday":
+        console.log("Today is Wednesday");
+        break;
+    case "Thursday":
+        console.log("Today is Thursday");
+        break;
+    case "Friday":
+        console.log("Today is Friday");
+        break;
+    default:
+        console.log("Today is a weekday");
+        break;
+}
 
 // let grade = "Z";
 
