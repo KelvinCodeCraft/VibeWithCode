@@ -1,124 +1,98 @@
-// function greet(name) {
-//     console.log(`Hello ${name}`);
+//  const showPrimes= (n) => {
+//     nextPrime: for (let i = 2; i < n; i++) {
+  
+//       for (let j = 2; j < i; j++) {
+//         if (i % j == 0) continue nextPrime;
+//       }
+  
+//       console.log( i ); // a prime
+//     }
+//   }
+
+// showPrimes(20)
+
+
+// const showPrimes = (n) => {
+
+//     for (let i = 2; i < n; i++) {
+//       if (!isPrime(i)) continue;
+  
+//       console.log(i);  // a prime
+//     }
+//   }
+  
+//   const isPrime = (n) => {
+//     for (let i = 2; i < n; i++) {
+//       if ( n % i == 0) return false;
+//     }
+//     return true;
+//   }
+
+//   showPrimes(20);
+//   isPrime(20)
+
+// a function in JavaScript is a reusable 
+// code designed to perform a particular task
+
+// syntax of a function
+// const functionName = (parameters) =>{
+//     //code to be executed
 // }
 
-// greet('Isaac');
-// greet('Ibrah');
-// greet('Kelvin');
-
-// functions can be created and assigned to variable
-// const greet = function(name){
-//     console.log(`Hello ${name}`);
+// const meet = (name) =>{
+//     console.log("We shold meet on " +name + " today")
 // }
 
-// Parameters and arguments
+// meet("google meet");
+// meet("Friday");
+// meet("Friday");
+// meet("Saturday");
+// meet("Sunday");
 
-// parameters are named variables that are used in the function 
-// definition to accept input values when the function is called
+// function multiply(x, y) {
+//     console.log(x * y);
+// }
 
-// Arguments are the actual values passed to the function when it is called
-
-// destructuring parameters
-// it allows you to destructure objects and arrays directly in the function parameters
-function personInfo({name, age}) {
-    console.log(`Name: ${name}, Age: ${age}`);
-}
-
-const person = {name: "Isaac", age: 20};
-personInfo(person)
-
-// destructuring arrays
-function sum([a, b, c]){
-    return a + b + c;
-}
-
-console.log(sum([2, 4, 10]))
-
-//arrow function
-// name is the parameter in greet1 function
-const greet1 = (name) => {
-    console.log(`Hello ${name}`);
-}
-
-greet1('Alice');
-
-//functions with default parameters
-function greet(name = "James") {
-    console.log(`Hello ${name}`);
-}
-
-greet();
-greet("Alice");
+// multiply(5, 10);
 
 
-function add(a, b){
-    return 20 % 2;
-}
-
-let results = add(2, 3);
-console.log(results); 
+// const sayHi = (name) => {
+//     console.log("Hello " + name);
+// }
 
 
-// recursive function
-function factorial(n) {
-    if (n <= 1) {
-        return 1;
+
+// sayHi("VibeWithCode")
+
+
+
+// const greet = (name, greeting) => {
+//     console.log(`${greeting} ${name}`);
+// }
+
+// greet("Vibez", "Hello");
+
+const getUser = (name, age) => ({
+    name: name,
+    age: age,
+    intro(){
+        return `${this.name} ${this.age}`;
     }
-    else {
-        return n * factorial(n - 1);
-    }
-}
+});
 
-console.log(factorial(5));
+console.log(getUser("Warren", 21).intro());
 
+// Warren 21
+// { name: Warren, age: 21}
 
-// anonymous function
-setTimeout(function(){
-    console.log("Hello after every 2 seconds");  
-}, 2000);
+const scores = [12, 17, 60, 50];
 
-// higher order function
-function higherOrder(fn){
-    return fn
-}
+const passed = scores.filter(score => score >=50)
 
-higherOrder(()=> console.log("I am a function passed as an argument"));
+console.log(passed);
 
-// Callback function, passed as a parameter in the higher order function
-function callbackFunction(){
-    console.log('I am  a callback function');
-}
+const items = [100, 200, 300];
 
-// higher order function
-function higherOrderFunction(func){
-    console.log('I am higher order function')
-    func()
-}
+const total = items.reduce((sum, item) => sum + item);
 
-higherOrderFunction(callbackFunction);
-
-// closures
-function outer(){
-    let counter = 0;
-
-    return function inner(){
-        counter++;
-        console.log(counter);
-        
-    };
-}
-
-const counterFunc = outer();
-counterFunc();
-counterFunc();
-counterFunc();
-
-
-// arrow functions and parameters
-
-const add1 = (a, b) => a + b;
-console.log(add1(5, 10));
-
-const greet2 = (name) => `Hello ${name}`;
-console.log(greet2("Building"));
-
+console.log(total);

@@ -5,13 +5,15 @@ function isPowerOfTwo(n) {
     while (n % 2 === 0) {
       n = n / 2;
     }
-  
+
+    // 8/2 = 4/2 = 2/2 =1
+    // 6/2 = 3/2 = 1.5
     // If we end up with 1, it's a power of two
     return n === 1;
   }
   
   // Test cases
-  console.log(isPowerOfTwo(8));  // true
+  console.log(isPowerOfTwo(16));  // true
   console.log(isPowerOfTwo(6));  // false
   
 
@@ -27,6 +29,6 @@ function isPowerOfTwo(n) {
 
 // If n is even, divide it by 2. We keep doing this until n becomes odd.
 
-// return n === 1;
+// return n === 1;  power of two will eventually reduce to 1.
 
 // After all divisions, if we’re left with 1, then it means n was a power of two.

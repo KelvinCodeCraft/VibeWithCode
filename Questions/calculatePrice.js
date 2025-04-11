@@ -24,11 +24,9 @@ class ShoppingCart {
   const cart = new ShoppingCart();
   
   const products = [
-    { price: 30, quantity: 2 },
-    { price: 50, quantity: 1 },
-    { price: 40, quantity: 1 }
+    { price: 30, quantity: 1 },
+    { price: 50, quantity: 1 }  
   ];
   
   const total = cart.calculate_total(products);
   console.log("Total amount (with discount and tax): $", total);
-  

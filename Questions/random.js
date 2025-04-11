@@ -14,7 +14,7 @@ function askGuess() {
   rl.question("Enter your guess: ", (input) => {
     const guess = Number(input);
 
-    if (isNaN(guess) || guess < 1 || guess > 100) {
+    if (isNaN(guess) || guess < 1 || guess > 100) { 
       console.log("OUT OF BOUNDS");
       return askGuess(); // ask again
     }
@@ -22,7 +22,7 @@ function askGuess() {
     guesses.push(guess);
 
     if (guess === target) {
-      console.log(`Correct! 🎉 You guessed it in ${guesses.length} tries!`);
+      console.log(`Correct!  You guessed it in ${guesses.length} tries!`);
       return rl.close();
     }
 

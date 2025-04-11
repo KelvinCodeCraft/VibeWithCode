@@ -140,6 +140,7 @@ switch (category) {
                 break;
             default:
                 console.log("Item not available")
+                //falsy value
         }
         break;
     default:

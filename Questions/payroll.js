@@ -25,6 +25,7 @@ class Payroll {
       } else {
         tax = (500 * 0.10) + (500 * 0.20) + ((taxableIncome - 1000) * 0.30);
       }
+
   
       // Step 4: Net pay after tax and social security
       const netPay = grossPay - socialSecurity - tax;
