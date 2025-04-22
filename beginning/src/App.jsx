@@ -3,21 +3,22 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-const Card = ({ title, rating, isCool }) => {
+const Card = ({ title, rating}) => {
+  const [hasLiked, setHasLiked] = useState(false);
+
   return (
     <div className='card'>
       <h2>{title}</h2>
       <h3>{rating}</h3>
-      <h4></h4>
-      <button>Like</button>
+      <button onClick={()=>setHasLiked(!hasLiked)}>
+        {hasLiked? '❤️': '🤍' }
+      </button>
     </div>
   )
 }
 
 const App = () => {
   
-  const [hasLiked, setHasLiked] = useState(false);
-
   return (
     <div className='card-container'> 
       <Card title="G20" rating={4.9} isCool = {true} />
